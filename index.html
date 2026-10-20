@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Café Chez Jad | Menu</title>
+<meta name="description" content="Découvrez la carte de Café Chez Jad : cafés, jus frais, boissons, snacks, biscuits et eaux.">
+<link rel="icon" href="assets/favicon.jpeg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="bar">
+    <a class="brand" href="#top" aria-label="Café Chez Jad">
+      <img src="assets/logo.jpeg" alt="Café Chez Jad" width="48" height="48">
+      <span class="brand-name">Café Chez Jad</span>
+    </a>
+    <div class="lang" role="group" aria-label="Langue / اللغة">
+      <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+      <button type="button" data-lang="ar" aria-pressed="false">العربية</button>
+    </div>
+  </div>
+  <nav class="chips" id="nav" aria-label="Catégories"></nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <img src="assets/logo.jpeg" alt="" width="132" height="132">
+    <h1 data-i18n="title"></h1>
+    <p data-i18n="sub"></p>
+  </section>
+  <div id="menu"></div>
+</main>
+
+<footer class="footer">
+  <p class="footer-name">Café Chez Jad</p>
+  <p data-i18n="thanks"></p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
