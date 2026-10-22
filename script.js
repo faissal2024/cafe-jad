@@ -5,6 +5,9 @@
     { id: "cafes", fr: "Cafés", ar: "القهوة", items: [
       ["Espresso", "إسبريسو", 12], ["Café Noir", "قهوة سوداء", 12], ["Café Crème", "قهوة بالكريمة", 12],
       ["Cappuccino", "كابتشينو", 12], ["Café au Lait", "قهوة بالحليب", 12], ["Café Américain", "قهوة أمريكية", 12] ] },
+    { id: "thes", fr: "Thés et infusions", ar: "الشاي والأعشاب", items: [
+      // Prix non communiqué : ajoutez-le comme 3e valeur, ex. ["Verveine", "اللويزة", 10]
+      ["Thé à la menthe", "أتاي بالنعناع"], ["Thé noir", "شاي أسود"], ["Verveine", "اللويزة"] ] },
     { id: "jus", fr: "Jus frais", ar: "العصائر الطبيعية", items: [
       ["Jus de Pomme", "عصير التفاح", 15], ["Jus de Citron / Citronnade", "عصير الليمون", 15],
       ["Jus de Banane", "عصير الموز", 15], ["Panaché", "باناشي", 20], ["Jus d’Avocat", "عصير الأفوكا", 20] ] },
@@ -52,8 +55,9 @@
       c.items.forEach(function (it) {
         var li = document.createElement("li"); li.className = "item";
         var n = document.createElement("span"); n.className = "name"; n.textContent = it[i];
-        var p = document.createElement("span"); p.className = "price"; p.textContent = num(it[2]) + " " + t.dh;
-        li.appendChild(n); li.appendChild(p); ul.appendChild(li);
+        var p = document.createElement("span"); p.className = "price"; li.appendChild(n);
+        if (typeof it[2] === "number") { p.textContent = num(it[2]) + " " + t.dh; li.appendChild(p); }
+        ul.appendChild(li);
       });
       sec.appendChild(ul); menuEl.appendChild(sec);
     });
